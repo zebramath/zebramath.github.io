@@ -1,0 +1,14 @@
+baseURL = "https://zebramath.github.io/"
+languageCode = "zh-cn"
+title = "My Personal Space"
+theme = "PaperMod"
+
+[languages]
+  [languages.zh]
+    languageName = "中文"
+    weight = 1
+    title = "我的个人主页"
+  [languages.en]
+    languageName = "English"
+    weight = 2
+    title = "My Homepage"
