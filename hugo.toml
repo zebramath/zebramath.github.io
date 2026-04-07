@@ -1,14 +1,77 @@
 baseURL = "https://zebramath.github.io/"
 languageCode = "zh-cn"
-title = "My Personal Space"
+title = "ZebraMath | 个人主页"
 theme = "PaperMod"
 
+paginate = 10
+
 [languages]
-  [languages.zh]
-    languageName = "中文"
-    weight = 1
-    title = "我的个人主页"
-  [languages.en]
-    languageName = "English"
-    weight = 2
-    title = "My Homepage"
+    [languages.zh]
+        languageName = "中文"
+        weight = 1
+        title = "ZebraMath 的空间"
+        [languages.zh.menu]
+            [[languages.zh.menu.main]]
+                name = "关于"
+                url = "about"
+                weight = 10
+            [[languages.zh.menu.main]]
+                name = "科研"
+                url = "research"
+                weight = 20
+            [[languages.zh.menu.main]]
+                name = "简历"
+                url = "cv"
+                weight = 30
+            [[languages.zh.menu.main]]
+                name = "爱好"
+                url = "hobbies"
+                weight = 40
+            [[languages.zh.menu.main]]
+                name = "博客"
+                url = "posts"
+                weight = 50
+
+    [languages.en]
+        languageName = "English"
+        weight = 2
+        title = "ZebraMath's Space"
+        [languages.en.menu]
+            [[languages.en.menu.main]]
+                name = "About"
+                url = "about"
+                weight = 10
+            [[languages.en.menu.main]]
+                name = "Research"
+                url = "research"
+                weight = 20
+            [[languages.en.menu.main]]
+                name = "CV"
+                url = "cv"
+                weight = 30
+            [[languages.en.menu.main]]
+                name = "Hobbies"
+                url = "hobbies"
+                weight = 40
+            [[languages.en.menu.main]]
+                name = "Blog"
+                url = "posts"
+                weight = 50
+
+[params]
+    env = "production"
+    [params.profileMode]
+        enabled = true
+        title = "你好, 我是 ZebraMath"
+        subtitle = "学术科研 | 游戏影视 | 终身学习者"
+        displayFullLangName = true
+        [[params.profileMode.buttons]]
+            name = "阅读博客"
+            url = "posts"
+        [[params.profileMode.buttons]]
+            name = "关于我"
+            url = "about"
+
+    ShowReadingTime = true
+    ShowShareButtons = true
+    ShowCodeCopyButtons = true
