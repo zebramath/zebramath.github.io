@@ -13,7 +13,7 @@ paginate = 10
     author = "ZebraMath"
     
     ShowReadingTime = true
-    ShowShareButtons = true
+    ShowShareButtons = false
     ShowCodeCopyButtons = true
     
     [params.assets]
