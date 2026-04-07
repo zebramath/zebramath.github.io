@@ -1,96 +1,54 @@
 baseURL = "https://zebramath.github.io/"
 languageCode = "zh-cn"
-defaultContentLanguage = "zh"
 title = "ZebraMath | 个人主页"
 theme = "PaperMod"
 
 paginate = 10
 
-[languages.zh]
-    languageName = "中文"
-    languageCode = "zh-cn"
-    weight = 1
-    title = "ZebraMath 的空间"
-    
-    [languages.zh.menu]
-        [[languages.zh.menu.main]]
-            name = "关于"
-            url = "/about"
-            weight = 10
-        [[languages.zh.menu.main]]
-            name = "科研"
-            url = "/research"
-            weight = 20
-        [[languages.zh.menu.main]]
-            name = "简历"
-            url = "/cv"
-            weight = 30
-        [[languages.zh.menu.main]]
-            name = "爱好"
-            url = "/hobbies"
-            weight = 40
-        [[languages.zh.menu.main]]
-            name = "博客"
-            url = "/posts"
-            weight = 50
-
-
-    [languages.zh.params.profileMode]
-        enabled = true
-        title = "你好, 我是 ZebraMath"
-        subtitle = "学术科研 | 游戏影视 | 终身学习者"
-        [[languages.zh.params.profileMode.buttons]]
-            name = "阅读博客"
-            url = "/posts"
-        [[languages.zh.params.profileMode.buttons]]
-            name = "关于我"
-            url = "/about"
-
-[languages.en]
-    languageName = "English"
-    languageCode = "en"
-    weight = 2
-    title = "ZebraMath's Space"
-    
-    [languages.en.menu]
-        [[languages.en.menu.main]]
-            name = "About"
-            url = "/about"
-            weight = 10
-        [[languages.en.menu.main]]
-            name = "Research"
-            url = "/research"
-            weight = 20
-        [[languages.en.menu.main]]
-            name = "CV"
-            url = "/cv"
-            weight = 30
-        [[languages.en.menu.main]]
-            name = "Hobbies"
-            url = "/hobbies"
-            weight = 40
-        [[languages.en.menu.main]]
-            name = "Blog"
-            url = "/posts"
-            weight = 50
-
-    [languages.en.params.profileMode]
-        enabled = true
-        title = "Hi, I'm ZebraMath"
-        subtitle = "Researcher | Gamer | Cinephile"
-        imageUrl = "img/avatar.png"
-        [[languages.en.params.profileMode.buttons]]
-            name = "Blog"
-            url = "/posts"
-        [[languages.en.params.profileMode.buttons]]
-            name = "About Me"
-            url = "/about"
-
 [params]
     env = "production"
+    title = "ZebraMath 的空间"
+    description = "学术科研 | 游戏影视 | 终身学习者"
+    keywords = ["Blog", "Research", "ZebraMath"]
+    author = "ZebraMath"
+    
     ShowReadingTime = true
     ShowShareButtons = true
     ShowCodeCopyButtons = true
-    displayFullLangName = true
+    
     [params.assets]
         disableHLJS = false
+
+    [params.profileMode]
+        enabled = true
+        title = "你好, 我是 ZebraMath"
+        subtitle = "学术科研 | 游戏影视 | 终身学习者"
+        imageUrl = "img/avatar.png"
+        [[params.profileMode.buttons]]
+            name = "阅读博客"
+            url = "posts" 
+        [[params.profileMode.buttons]]
+            name = "关于我"
+            url = "about"
+
+[menu]
+    [[menu.main]]
+        name = "关于"
+        pageRef = "about" 
+        weight = 10
+    [[menu.main]]
+        name = "科研"
+        pageRef = "research"
+        weight = 20
+    [[menu.main]]
+        name = "简历"
+        pageRef = "cv"
+        weight = 30
+    [[menu.main]]
+        name = "爱好"
+        pageRef = "hobbies"
+        weight = 40
+    [[menu.main]]
+        name = "博客"
+        pageRef = "posts"
+        weight = 50
