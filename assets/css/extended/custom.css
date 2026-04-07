@@ -1,0 +1,88 @@
+.post-content {
+    font-size: 15px !important;
+}
+.post-content p, .post-content li {
+    font-size: 15px !important;
+}
+
+.post-content h1 { font-size: 24px !important; margin-top: 20px !important; }
+.post-content h2 { font-size: 20px !important; margin-top: 18px !important; }
+.post-content h3 { font-size: 17px !important; }
+
+.post-header h1 {
+    font-size: 24px !important;
+    margin-bottom: 20px !important;
+    font-weight: 700 !important;
+}
+
+.profile_inner h1 {
+    font-size: 40px !important; 
+}
+
+.entry-title {
+    font-size: 20px !important;
+}
+
+.profile_inner .buttons .button {
+    font-size: 14px !important;
+    padding: 5px 12px !important;
+}
+
+.menu a {
+    font-size: 15px !important;
+}
+.logo a {
+    font-size: 20px !important;
+}
+
+.footer {
+    font-size: 12px !important;
+}
+.post-meta {
+    font-size: 13px !important;
+}
+
+:root {
+    --max-width: 1000px; 
+}
+
+.main {
+    max-width: var(--max-width) !important;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header {
+    max-width: var(--max-width) !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 100% !important;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.footer {
+    max-width: var(--max-width) !important;
+}
+
+.nav {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    width: 100% !important;
+}
+
+.logo {
+    margin-right: auto !important;
+}
+
+#menu {
+    display: flex !important;
+    margin-left: 0 !important;
+    padding: 0 !important;
+    list-style: none !important;
+}
+
+#menu li {
+    margin-left: 20px !important;
+}

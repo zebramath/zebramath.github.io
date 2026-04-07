@@ -1,16 +1,16 @@
 baseURL = "https://zebramath.github.io/"
 languageCode = "zh-cn"
-title = "ZebraMath | 个人主页"
+title = "zebramath | 个人主页"
 theme = "PaperMod"
 
 paginate = 10
 
 [params]
     env = "production"
-    title = "ZebraMath 的空间"
-    description = "学术科研 | 游戏影视 | 终身学习者"
-    keywords = ["Blog", "Research", "ZebraMath"]
-    author = "ZebraMath"
+    title = "zebramath 的空间"
+    description = "学术科研 | 游戏影视"
+    keywords = ["Blog", "Research", "zebramath"]
+    author = "zebramath"
     
     ShowReadingTime = true
     ShowShareButtons = false
@@ -21,16 +21,8 @@ paginate = 10
 
     [params.profileMode]
         enabled = true
-        title = "你好, 我是 ZebraMath"
-        subtitle = "学术科研 | 游戏影视 | 终身学习者"
-        imageUrl = "img/avatar.png"
-        [[params.profileMode.buttons]]
-            name = "阅读博客"
-            url = "posts" 
-        [[params.profileMode.buttons]]
-            name = "关于我"
-            url = "about"
-
+        title = "你好, 我是 zebramath"
+        subtitle = "学术科研 | 游戏影视"
 [menu]
     [[menu.main]]
         name = "关于"
