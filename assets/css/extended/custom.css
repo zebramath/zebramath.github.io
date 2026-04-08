@@ -36,7 +36,7 @@
 }
 
 .footer {
-    font-size: 12px !important;
+    display: none !important;
 }
 .post-meta {
     font-size: 13px !important;
