@@ -15,6 +15,9 @@ paginate = 10
     ShowReadingTime = true
     ShowShareButtons = false
     ShowCodeCopyButtons = true
+
+    defaultTheme = "light"
+    disableThemeToggle = true
     
     [params.assets]
         disableHLJS = false
