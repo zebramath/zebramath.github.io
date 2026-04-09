@@ -1,70 +1,53 @@
-.post-content {
-    font-size: 15px !important;
-}
-.post-content p, .post-content li {
-    font-size: 15px !important;
-}
-
-.post-content h1 { font-size: 24px !important; margin-top: 20px !important; }
-.post-content h2 { font-size: 20px !important; margin-top: 18px !important; }
-.post-content h3 { font-size: 17px !important; }
-
-.post-header h1 {
-    font-size: 24px !important;
-    margin-bottom: 20px !important;
-    font-weight: 700 !important;
-}
-
-.profile_inner h1 {
-    font-size: 40px !important; 
-}
-
-.entry-title {
-    font-size: 20px !important;
-}
-
-.profile_inner .buttons .button {
-    font-size: 14px !important;
-    padding: 5px 12px !important;
-}
-
-.menu a {
-    font-size: 15px !important;
-}
-.logo a {
-    font-size: 20px !important;
-}
-
-.footer {
-    display: none !important;
-}
-.post-meta {
-    font-size: 13px !important;
-}
+/* 外部字体与全局变量 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&display=swap');
 
 :root {
-    --max-width: 1000px; 
+    --max-width: 1000px;
+    --main-bg: #ffffff;
+    --body-bg: #eeeeee;
+    --text-main: 18px;
+    --font-family: 'Noto Serif SC', serif;
+}
+
+/* 定义动画：从透明且下方 20px 的位置回到原位 */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 基础布局调整*/
+body {
+    font-family: var(--font-family) !important;
+    background-color: var(--body-bg) !important;
+    line-height: 1.8 !important;
+    letter-spacing: 0.02em !important;
+}
+
+/* 主容器：控制宽度、背景、圆角及阴影 */
+.main, .header, .footer {
+    max-width: var(--max-width) !important;
+    margin: 0 auto !important; /* 水平居中 */
 }
 
 .main {
-    max-width: var(--max-width) !important;
-    margin-left: auto;
-    margin-right: auto;
+    background-color: var(--main-bg) !important;
+    padding: 40px !important;
+    border-radius: 12px !important;
+    margin-top: 20px !important;
+    margin-bottom: 20px !important;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05) !important;
 }
 
-.header {
-    max-width: var(--max-width) !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    width: 100% !important;
-    padding: 0;
-    box-sizing: border-box;
-}
+/* 隐藏底部栏*/
+.footer { display: none !important; }
 
-.footer {
-    max-width: var(--max-width) !important;
-}
-
+/*导航栏与菜单 (Header & Nav)*/
 .nav {
     display: flex !important;
     justify-content: space-between !important;
@@ -72,17 +55,41 @@
     width: 100% !important;
 }
 
-.logo {
-    margin-right: auto !important;
-}
+.logo a { font-size: 20px !important; }
 
 #menu {
     display: flex !important;
-    margin-left: 0 !important;
-    padding: 0 !important;
     list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
-#menu li {
-    margin-left: 20px !important;
+#menu li { margin-left: 20px !important; }
+
+.menu a { font-size: 15px !important; }
+
+/* 文章内容样式 (Typography) */
+/* 正文文字大小 */
+.post-content, .post-content p, .post-content li {
+    font-size: var(--text-main) !important;
+    opacity: 0; /* 关键：初始状态必须设为透明 */
+    animation: fadeInUp 0.8s ease-out forwards !important;
+}
+
+/* 文章标题与各级标题 */
+.post-header h1 { font-size: 24px !important; font-weight: 700 !important; margin-bottom: 20px !important; }
+.post-content h1 { font-size: 24px !important; margin-top: 20px !important; }
+.post-content h2 { font-size: 20px !important; margin-top: 18px !important; }
+.post-content h3 { font-size: 17px !important; }
+
+/* 元数据 (日期、标签等) */
+.post-meta { font-size: 13px !important; }
+.entry-title { font-size: 20px !important; }
+
+/* 个人主页/侧边栏组件 (Profile)*/
+.profile_inner h1 { font-size: 40px !important; }
+
+.profile_inner .buttons .button {
+    font-size: 14px !important;
+    padding: 5px 12px !important;
 }
