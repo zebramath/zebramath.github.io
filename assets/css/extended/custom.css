@@ -1,4 +1,4 @@
-/* 外部字体与全局变量 */
+/* --- 外部资源与变量 --- */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&display=swap');
 
 :root {
@@ -9,19 +9,7 @@
     --font-family: 'Noto Serif SC', serif;
 }
 
-/* 定义动画：从透明且下方 20px 的位置回到原位 */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* 基础布局调整*/
+/* --- 基础布局 --- */
 body {
     font-family: var(--font-family) !important;
     background-color: var(--body-bg) !important;
@@ -29,10 +17,11 @@ body {
     letter-spacing: 0.02em !important;
 }
 
-/* 主容器：控制宽度、背景、圆角及阴影 */
+/* 容器宽度与居中控制 */
 .main, .header, .footer {
     max-width: var(--max-width) !important;
-    margin: 0 auto !important; /* 水平居中 */
+    margin-left: auto !important;
+    margin-right: auto !important;
 }
 
 .main {
@@ -44,15 +33,13 @@ body {
     box-shadow: 0 4px 10px rgba(0,0,0,0.05) !important;
 }
 
-/* 隐藏底部栏*/
 .footer { display: none !important; }
 
-/*导航栏与菜单 (Header & Nav)*/
+/* --- 导航栏 (Header & Nav) --- */
 .nav {
     display: flex !important;
     justify-content: space-between !important;
     align-items: center !important;
-    width: 100% !important;
 }
 
 .logo a { font-size: 20px !important; }
@@ -65,32 +52,70 @@ body {
 }
 
 #menu li { margin-left: 20px !important; }
+#menu a span { font-size: 18px !important; }
 
-#menu a span {
-    font-size: 18px !important; }
+/* --- 文章内容与动画 --- */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
 
-/* 文章内容样式 (Typography) */
-/* 正文文字大小 */
+/* 合并正文文本样式与动画 */
 .post-content, .post-content p, .post-content li {
     font-size: var(--text-main) !important;
-    opacity: 0; /* 关键：初始状态必须设为透明 */
+    opacity: 0; 
     animation: fadeInUp 0.8s ease-out forwards !important;
 }
 
-/* 文章标题与各级标题 */
+/* 标题系统简化 */
 .post-header h1 { font-size: 24px !important; font-weight: 700 !important; margin-bottom: 20px !important; }
 .post-content h1 { font-size: 24px !important; margin-top: 20px !important; }
 .post-content h2 { font-size: 20px !important; margin-top: 18px !important; }
 .post-content h3 { font-size: 17px !important; }
 
-/* 元数据 (日期、标签等) */
 .post-meta { font-size: 13px !important; }
 .entry-title { font-size: 20px !important; }
 
-/* 个人主页/侧边栏组件 (Profile)*/
+/* --- 个人主页 (Profile) --- */
 .profile_inner h1 { font-size: 40px !important; }
-
 .profile_inner .buttons .button {
     font-size: 14px !important;
     padding: 5px 12px !important;
 }
+
+/* --- 学业页面专用组件 --- */
+.course-card { 
+    margin-bottom: 1.5rem; 
+    border: 1px solid #e0e0e0; 
+    border-radius: 8px; 
+    overflow: hidden; 
+}
+
+.course-card summary { 
+    padding: 12px 15px;
+    background: #f8f9fa; 
+    cursor: pointer; 
+    font-weight: 600; 
+    font-size: 1.2rem;
+    list-style: none;
+}
+.course-card summary::-webkit-details-marker { display: none; }
+
+.course-sub-group { 
+    margin: 10px 15px 15px 25px;
+    border-left: 2px solid #eee; 
+    padding-left: 15px;
+}
+
+.course-sub-group summary { 
+    padding: 5px 0; 
+    background: transparent; 
+    color: #555; 
+    font-size: 1.1rem; 
+    font-weight: 500;
+}
+
+.pdf-list { list-style: none; padding: 5px 0 5px 20px; margin: 0; }
+.pdf-item { padding: 4px 0; display: flex; align-items: center; }
+.pdf-item a { color: #0066cc; text-decoration: none; font-size: 1.05rem; }
+.pdf-item a:hover { text-decoration: underline; }

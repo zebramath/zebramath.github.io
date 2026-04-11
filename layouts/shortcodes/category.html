@@ -1,0 +1,6 @@
+<details class="course-sub-group" {{ if .Get "open" }}open{{ end }}>
+    <summary>{{ .Get "title" }}</summary>
+    <ul class="pdf-list">
+        {{ .Inner }}
+    </ul>
+</details>

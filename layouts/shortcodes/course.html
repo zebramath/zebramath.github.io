@@ -1,0 +1,6 @@
+<details class="course-card" {{ if .Get "open" }}open{{ end }}>
+    <summary>{{ .Get "title" }}</summary>
+    <div class="course-content">
+        {{ .Inner }}
+    </div>
+</details>
