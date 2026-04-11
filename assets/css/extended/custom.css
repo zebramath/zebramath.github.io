@@ -56,7 +56,7 @@ body {
 
 /* --- 文章内容与动画 --- */
 @keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(20px); }
+    from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
 }
 
@@ -84,38 +84,58 @@ body {
 }
 
 /* --- 学业页面专用组件 --- */
+
+/* 给卡片内部的内容区域增加底部留白 */
+.course-content {
+    padding-bottom: 4px !important;
+}
+
 .course-card { 
-    margin-bottom: 1.5rem; 
+    margin-bottom: 1.2rem !important;
     border: 1px solid #e0e0e0; 
     border-radius: 8px; 
     overflow: hidden; 
 }
 
 .course-card summary { 
-    padding: 12px 15px;
+    padding: 8px 15px !important;
     background: #f8f9fa; 
     cursor: pointer; 
     font-weight: 600; 
-    font-size: 1.2rem;
+    font-size: 1.15rem;
     list-style: none;
 }
 .course-card summary::-webkit-details-marker { display: none; }
 
 .course-sub-group { 
-    margin: 10px 15px 15px 25px;
-    border-left: 2px solid #eee; 
-    padding-left: 15px;
+    margin: 4px 15px 4px 30px !important;
 }
 
 .course-sub-group summary { 
-    padding: 5px 0; 
-    background: transparent; 
-    color: #555; 
-    font-size: 1.1rem; 
-    font-weight: 500;
+    padding: 4px 0px 0px 0px !important;
+    background: transparent;
+    color: #555;
+    font-size: 1.1rem;
+    font-weight: 550;
 }
 
-.pdf-list { list-style: none; padding: 5px 0 5px 20px; margin: 0; }
-.pdf-item { padding: 4px 0; display: flex; align-items: center; }
-.pdf-item a { color: #0066cc; text-decoration: none; font-size: 1.05rem; }
-.pdf-item a:hover { text-decoration: underline; }
+.pdf-list { 
+    list-style: none;
+    padding: 0px 0px 0px 25px !important;
+    margin: -4px 0px -2px 0px !important;
+}
+.pdf-item { 
+    padding: 1px 0px !important;
+    display: flex;
+    align-items: center;
+}
+.pdf-item a { 
+    color: #0066cc; 
+    text-decoration: none !important;
+    box-shadow: none !important;
+    font-size: 1.1rem; 
+}
+
+.pdf-item a:hover { 
+    text-decoration: none !important; 
+}
