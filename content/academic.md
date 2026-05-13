@@ -12,12 +12,7 @@ hidemeta: true
   {{< /category >}}
 
   {{< category title="作业" >}}
-    <li class="pdf-item"><a href="/docs/5 常微分方程/作业/作业1/作业1.pdf">第一次作业</a></li>
-    <li class="pdf-item"><a href="/docs/5 常微分方程/作业/作业2/作业2.pdf">第二次作业</a></li>
-    <li class="pdf-item"><a href="/docs/5 常微分方程/作业/作业3/作业3.pdf">第三次作业</a></li>
-    <li class="pdf-item"><a href="/docs/5 常微分方程/作业/作业4/作业4.pdf">第四次作业</a></li>
-    <li class="pdf-item"><a href="/docs/5 常微分方程/作业/作业5/作业5.pdf">第五次作业</a></li>
-    <li class="pdf-item"><a href="/docs/5 常微分方程/作业/作业6/作业6.pdf">第六次作业</a></li>
+    {{< batch-pdf base="/docs/5 常微分方程/作业" file_prefix="作业" name="作业" count="7" >}}
   {{< /category >}}
 
 {{< /course >}}
@@ -25,19 +20,11 @@ hidemeta: true
 {{< course title="应用数学导论（胡俊）" >}}
 
   {{< category title="上机作业" >}}
-    <li class="pdf-item"><a href="/docs/6 应数导/上机作业/作业1/报告1.pdf">第一次上机作业</a></li>
-    <li class="pdf-item"><a href="/docs/6 应数导/上机作业/作业2/报告2.pdf">第二次上机作业</a></li>
-    <li class="pdf-item"><a href="/docs/6 应数导/上机作业/作业3/报告3.pdf">第三次上机作业</a></li>
+    {{< batch-pdf base="/docs/6 应数导/上机作业" dir_prefix="作业" file_prefix="报告" name="上机作业" count="3" >}}
   {{< /category >}}
 
   {{< category title="书面作业" >}}
-    <li class="pdf-item"><a href="/docs/6 应数导/书面作业/作业1/作业1.pdf">第一次书面作业</a></li>
-    <li class="pdf-item"><a href="/docs/6 应数导/书面作业/作业2/作业2.pdf">第二次书面作业</a></li>
-    <li class="pdf-item"><a href="/docs/6 应数导/书面作业/作业3/作业3.pdf">第三次书面作业</a></li>
-    <li class="pdf-item"><a href="/docs/6 应数导/书面作业/作业4/作业4.pdf">第四次书面作业</a></li>
-    <li class="pdf-item"><a href="/docs/6 应数导/书面作业/作业5/作业5.pdf">第五次书面作业</a></li>
-    <li class="pdf-item"><a href="/docs/6 应数导/书面作业/作业6/作业6.pdf">第六次书面作业</a></li>
-    <li class="pdf-item"><a href="/docs/6 应数导/书面作业/作业7/作业7.pdf">第七次书面作业</a></li>
+    {{< batch-pdf base="/docs/6 应数导/书面作业" file_prefix="作业" name="书面作业" count="7" >}}
   {{< /category >}}
 
 {{< /course >}}
@@ -49,26 +36,11 @@ hidemeta: true
   {{< /category >}}
 
   {{< category title="上机作业" >}}
-    <li class="pdf-item"><a href="/docs/7 数值分析/上机作业/作业1/报告1.pdf">第一次上机作业</a></li>
-    <li class="pdf-item"><a href="/docs/7 数值分析/上机作业/作业2/报告2.pdf">第二次上机作业</a></li>
+    {{< batch-pdf base="/docs/7 数值分析/上机作业" dir_prefix="作业" file_prefix="报告" name="上机作业" count="3" >}}
   {{< /category >}}
 
   {{< category title="书面作业" >}}
-    <li class="pdf-item"><a href="/docs/7 数值分析/书面作业/作业1/作业1.pdf">第一次书面作业</a></li>
-    <li class="pdf-item"><a href="/docs/7 数值分析/书面作业/作业2/作业2.pdf">第二次书面作业</a></li>
-    <li class="pdf-item"><a href="/docs/7 数值分析/书面作业/作业3/作业3.pdf">第三次书面作业</a></li>
-    <li class="pdf-item"><a href="/docs/7 数值分析/书面作业/作业4/作业4.pdf">第四次书面作业</a></li>
-    <li class="pdf-item"><a href="/docs/7 数值分析/书面作业/作业5/作业5.pdf">第五次书面作业</a></li>
-    <li class="pdf-item"><a href="/docs/7 数值分析/书面作业/作业6/作业6.pdf">第六次书面作业</a></li>
-    <li class="pdf-item"><a href="/docs/7 数值分析/书面作业/作业7/作业7.pdf">第七次书面作业</a></li>
-    <li class="pdf-item"><a href="/docs/7 数值分析/书面作业/作业8/作业8.pdf">第八次书面作业</a></li>
-    <li class="pdf-item"><a href="/docs/7 数值分析/书面作业/作业9/作业9.pdf">第九次书面作业</a></li>
-    <li class="pdf-item"><a href="/docs/7 数值分析/书面作业/作业10/作业10.pdf">第十次书面作业</a></li>
-    <li class="pdf-item"><a href="/docs/7 数值分析/书面作业/作业11/作业11.pdf">第十一次书面作业</a></li>
-    <li class="pdf-item"><a href="/docs/7 数值分析/书面作业/作业12/作业12.pdf">第十二次书面作业</a></li>
-    <li class="pdf-item"><a href="/docs/7 数值分析/书面作业/作业13/作业13.pdf">第十三次书面作业</a></li>
-    <li class="pdf-item"><a href="/docs/7 数值分析/书面作业/作业14/作业14.pdf">第十四次书面作业</a></li>
-    <li class="pdf-item"><a href="/docs/7 数值分析/书面作业/作业15/作业15.pdf">第十五次书面作业</a></li>
+    {{< batch-pdf base="/docs/7 数值分析/书面作业" file_prefix="作业" name="书面作业" count="18" >}}
   {{< /category >}}
 
 {{< /course >}}
@@ -76,8 +48,7 @@ hidemeta: true
 {{< course title="科学计算中的量子算法（安冬）" >}}
 
   {{< category title="作业" >}}
-    <li class="pdf-item"><a href="/docs/8 科学计算中的量子算法/作业/作业1/作业1.pdf">第一次作业</a></li>
-    <li class="pdf-item"><a href="/docs/8 科学计算中的量子算法/作业/作业2/作业2.pdf">第二次作业</a></li>
+    {{< batch-pdf base="/docs/8 科学计算中的量子算法/作业" file_prefix="作业" name="作业" count="2" >}}
   {{< /category >}}
 
 {{< /course >}}

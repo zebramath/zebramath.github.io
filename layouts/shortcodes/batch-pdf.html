@@ -1,0 +1,25 @@
+{{- $base := .Get "base" -}}
+{{- $filePrefix := .Get "file_prefix" -}}
+{{- $dirPrefix := .Get "dir_prefix" | default $filePrefix -}}
+{{- $name := .Get "name" -}}
+{{- $count := int (.Get "count") -}}
+
+{{- $digits := slice "" "一" "二" "三" "四" "五" "六" "七" "八" "九" -}}
+
+{{- range $i := seq $count -}}
+  {{- $cnNum := "" -}}
+  
+  {{- if eq $i 10 -}}
+    {{- $cnNum = "十" -}}
+  {{- else if lt $i 10 -}}
+    {{- $cnNum = index $digits $i -}}
+  {{- else if lt $i 100 -}}
+    {{- $tens := div $i 10 -}}
+    {{- $ones := mod $i 10 -}}
+    {{- $tensStr := index $digits $tens -}}
+    {{- if eq $tens 1 -}}{{- $tensStr = "" -}}{{- end -}}
+    {{- $onesStr := index $digits $ones -}}
+    {{- $cnNum = printf "%s十%s" $tensStr $onesStr -}}
+  {{- end }}
+    <li class="pdf-item"><a href="{{ $base }}/{{ $dirPrefix }}{{ $i }}/{{ $filePrefix }}{{ $i }}.pdf">第{{ $cnNum }}次{{ $name }}</a></li>
+{{ end -}}
