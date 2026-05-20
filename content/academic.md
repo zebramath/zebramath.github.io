@@ -12,7 +12,7 @@ hidemeta: true
   {{< /category >}}
 
   {{< category title="作业" >}}
-    {{< batch-pdf base="/docs/5 常微分方程/作业" file_prefix="作业" name="作业" count="7" >}}
+    {{< batch-pdf base="/docs/5 常微分方程/作业" file_prefix="作业" name="作业" count="8" >}}
   {{< /category >}}
 
 {{< /course >}}
