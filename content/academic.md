@@ -48,7 +48,7 @@ hidemeta: true
 {{< course title="科学计算中的量子算法（安冬）" >}}
 
   {{< category title="作业" >}}
-    {{< batch-pdf base="/docs/8 科学计算中的量子算法/作业" file_prefix="作业" name="作业" count="2" >}}
+    {{< batch-pdf base="/docs/8 科学计算中的量子算法/作业" file_prefix="作业" name="作业" count="3" >}}
   {{< /category >}}
 
 {{< /course >}}
