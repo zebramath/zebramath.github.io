@@ -12,7 +12,7 @@ hidemeta: true
   {{< /category >}}
 
   {{< category title="作业" >}}
-    {{< batch-pdf base="/docs/5 常微分方程/作业" file_prefix="作业" name="作业" count="8" >}}
+    {{< batch-pdf base="/docs/5 常微分方程/作业" file_prefix="作业" name="作业" count="9" >}}
   {{< /category >}}
 
 {{< /course >}}
@@ -36,11 +36,11 @@ hidemeta: true
   {{< /category >}}
 
   {{< category title="上机作业" >}}
-    {{< batch-pdf base="/docs/7 数值分析/上机作业" dir_prefix="作业" file_prefix="报告" name="上机作业" count="3" >}}
+    {{< batch-pdf base="/docs/7 数值分析/上机作业" dir_prefix="作业" file_prefix="报告" name="上机作业" count="4" >}}
   {{< /category >}}
 
   {{< category title="书面作业" >}}
-    {{< batch-pdf base="/docs/7 数值分析/书面作业" file_prefix="作业" name="书面作业" count="18" >}}
+    {{< batch-pdf base="/docs/7 数值分析/书面作业" file_prefix="作业" name="书面作业" count="22" >}}
   {{< /category >}}
 
 {{< /course >}}
