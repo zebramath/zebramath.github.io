@@ -1,0 +1,61 @@
+{{- $lang := .Page.Lang -}}
+<div class="academic" data-academic>
+  <div class="section-intro">
+    <label class="resource-search">
+      <span class="sr-only">{{ if eq $lang "zh" }}搜索课程资料{{ else }}Search course resources{{ end }}</span>
+      <svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-4-4"></path></svg>
+      <input type="search" data-academic-search placeholder="{{ if eq $lang "zh" }}搜索课程或资料…{{ else }}Search courses or resources…{{ end }}">
+    </label>
+  </div>
+
+  <div class="course-grid">
+  {{- range hugo.Data.academic.courses }}
+    {{- $course := . -}}
+    {{- $title := index $course.title $lang | default (index $course.title "zh") -}}
+    {{- $term := index $course.term $lang | default (index $course.term "zh") -}}
+    {{- $total := 0 -}}
+    {{- range $course.groups }}
+      {{- with .items }}{{ $total = add $total (len .) }}{{ end -}}
+      {{- with .batch }}{{ $total = add $total (int .count) }}{{ end -}}
+    {{- end }}
+    <details class="course-card" data-course>
+      <summary>
+        <span class="course-heading">
+          <strong>{{ $title }}</strong>
+          <small>{{ $term }} · {{ $total }} {{ if eq $lang "zh" }}项资料{{ else }}resources{{ end }}</small>
+        </span>
+      </summary>
+      <div class="course-content">
+        {{- range $course.groups }}
+          {{- $groupTitle := index .title $lang | default (index .title "zh") -}}
+          {{- $groupTotal := 0 -}}
+          {{- with .items }}{{ $groupTotal = len . }}{{ end -}}
+          {{- with .batch }}{{ $groupTotal = add $groupTotal (int .count) }}{{ end -}}
+          {{- $rows3 := div (add $groupTotal 2) 3 -}}
+          {{- $rows2 := div (add $groupTotal 1) 2 -}}
+          {{- if lt $rows3 1 }}{{ $rows3 = 1 }}{{ end -}}
+          {{- if lt $rows2 1 }}{{ $rows2 = 1 }}{{ end -}}
+          <section class="resource-group">
+            <h3>{{ $groupTitle }}</h3>
+            <ul class="pdf-list" style="--pdf-rows-3: {{ $rows3 }}; --pdf-rows-2: {{ $rows2 }};">
+              {{- range .items }}
+                {{- $itemTitle := index .title $lang | default (index .title "zh") -}}
+                <li class="pdf-item"><a href="{{ .url | safeURL }}" target="_blank" rel="noopener">{{ $itemTitle }}</a></li>
+              {{- end }}
+              {{- with .batch }}
+                {{- $batch := . -}}
+                {{- $label := index $batch.label $lang | default (index $batch.label "zh") -}}
+                {{- range $i := seq (int $batch.count) }}
+                  {{- $url := printf "%s/%s%d/%s%d.pdf" $batch.base $batch.dir_prefix $i $batch.file_prefix $i -}}
+                  <li class="pdf-item"><a href="{{ $url | safeURL }}" target="_blank" rel="noopener">{{ printf $label $i }}</a></li>
+                {{- end }}
+              {{- end }}
+            </ul>
+          </section>
+        {{- end }}
+      </div>
+    </details>
+  {{- end }}
+  </div>
+  <p class="empty-state" data-academic-empty hidden>{{ if eq $lang "zh" }}没有找到匹配的课程资料。{{ else }}No matching course resources.{{ end }}</p>
+</div>

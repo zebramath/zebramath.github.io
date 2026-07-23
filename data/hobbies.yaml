@@ -1,0 +1,78 @@
+settings:
+  page_size: 12
+  excluded_steam_appids: [1281930]
+
+media: []
+
+games:
+  - title: { zh: 14 种扫雷变体, en: 14 Minesweeper Variants }
+    steam_appid: 1865060
+  - title: { zh: 背包乱斗：福西法的宝藏, en: Backpack Battles }
+    steam_appid: 2427700
+  - title: { zh: 不思议迷宫, en: Gumballs & Dungeons }
+    steam_appid: 3112010
+  - title: { zh: 饥荒, en: Don't Starve }
+    steam_appid: 219740
+  - title: { zh: 饥荒联机版, en: Don't Starve Together }
+    steam_appid: 322330
+  - title: { zh: 鲁特里一家死了, en: The Roottrees are Dead }
+    steam_appid: 2754380
+  - title: { zh: 缺氧, en: Oxygen Not Included }
+    steam_appid: 457140
+  - title: { zh: 神界：原罪 2 终极版, en: "Divinity: Original Sin 2 - Definitive Edition" }
+    steam_appid: 435150
+  - title: { zh: 土豆兄弟, en: Brotato }
+    steam_appid: 1942280
+  - title: { zh: 幸运房东, en: Luck be a Landlord }
+    steam_appid: 1404850
+  - title: { zh: 异形工厂, en: shapez }
+    steam_appid: 1318690
+  - title: { zh: 雨世界, en: Rain World }
+    steam_appid: 312520
+  - title: { zh: 原点计划, en: Bioprototype }
+    steam_appid: 3689520
+    cover: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3689520/31eed6c7716db39bdf5442d69534f342c0cde777/header.jpg?t=1769062576"
+  - title: { zh: Baba Is You, en: Baba Is You }
+    steam_appid: 736260
+  - title: { zh: 小丑牌, en: Balatro }
+    steam_appid: 2379780
+  - title: { zh: 气球塔防 6, en: Bloons TD 6 }
+    steam_appid: 960090
+  - title: { zh: 蔚蓝, en: Celeste }
+    steam_appid: 504230
+  - title: { zh: 城市：天际线, en: "Cities: Skylines" }
+    steam_appid: 255710
+  - title: { zh: 茶杯头, en: Cuphead }
+    steam_appid: 268910
+  - title: { zh: 暗黑地牢, en: Darkest Dungeon }
+    steam_appid: 262060
+  - title: { zh: 死亡细胞, en: Dead Cells }
+    steam_appid: 588650
+  - title: { zh: 空洞骑士, en: Hollow Knight }
+    steam_appid: 367520
+  - title: { zh: 空洞骑士：丝之歌, en: "Hollow Knight: Silksong" }
+    steam_appid: 1030300
+  - title: { zh: 无限塔防 2, en: Infinitode 2 }
+    steam_appid: 937310
+  - title: { zh: 怪物火车 2, en: Monster Train 2 }
+    steam_appid: 2742830
+  - title: { zh: 奥日与黑暗森林, en: Ori and the Blind Forest }
+    steam_appid: 261570
+  - title: { zh: 奥日与精灵意志, en: Ori and the Will of the Wisps }
+    steam_appid: 1057090
+  - title: { zh: 帕奎莱特兔洞历险, en: Paquerette Down the Bunburrows }
+    steam_appid: 1628610
+  - title: { zh: 建桥专家 2, en: Poly Bridge 2 }
+    steam_appid: 1062160
+  - title: { zh: 荒野大镖客：救赎 2, en: Red Dead Redemption 2 }
+    steam_appid: 1174180
+  - title: { zh: 杀戮尖塔, en: Slay the Spire }
+    steam_appid: 646570
+  - title: { zh: 杀戮尖塔 2, en: Slay the Spire 2 }
+    steam_appid: 2868840
+  - title: { zh: 星露谷物语, en: Stardew Valley }
+    steam_appid: 413150
+  - title: { zh: 泰拉瑞亚, en: Terraria }
+    steam_appid: 105600
+  - title: { zh: 以撒的结合：重生, en: "The Binding of Isaac: Rebirth" }
+    steam_appid: 250900

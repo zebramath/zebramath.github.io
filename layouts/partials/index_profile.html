@@ -1,0 +1,12 @@
+<section class="profile" aria-labelledby="profile-title">
+    {{- with site.Params.profileMode }}
+    <div class="profile_inner">
+        {{- with .kicker }}<p class="profile-kicker">{{ . }}</p>{{ end }}
+        {{- $profileTitle := .title | default site.Title -}}
+        <h1 id="profile-title" class="profile-title" data-text="{{ $profileTitle | plainify }}">
+            {{ $profileTitle | plainify }}
+        </h1>
+        {{- partial "social_icons.html" (dict "align" "center") -}}
+    </div>
+    {{- end }}
+</section>

@@ -1,0 +1,92 @@
+courses:
+  - title:
+      zh: 常微分方程
+      en: Ordinary Differential Equations
+    term:
+      zh: 2025-2026 春
+      en: Spring 2026
+    groups:
+      - title: { zh: 笔记, en: Notes }
+        items:
+          - title: { zh: 完整笔记, en: Complete notes }
+            url: /docs/5 常微分方程/笔记/main.pdf
+      - title: { zh: 作业, en: Assignments }
+        batch:
+          base: /docs/5 常微分方程/作业
+          file_prefix: 作业
+          dir_prefix: 作业
+          label: { zh: 第 %d 次作业, en: Assignment %d }
+          count: 10
+
+  - title:
+      zh: 应用数学导论
+      en: Introduction to Applied Mathematics
+    term:
+      zh: 2025-2026 春
+      en: Spring 2026
+    groups:
+      - title: { zh: 上机作业, en: Computing assignments }
+        batch:
+          base: /docs/6 应数导/上机作业
+          file_prefix: 报告
+          dir_prefix: 作业
+          label: { zh: 第 %d 次上机作业, en: Computing assignment %d }
+          count: 3
+      - title: { zh: 书面作业, en: Written assignments }
+        batch:
+          base: /docs/6 应数导/书面作业
+          file_prefix: 作业
+          dir_prefix: 作业
+          label: { zh: 第 %d 次书面作业, en: Written assignment %d }
+          count: 7
+      - title: { zh: 大作业, en: Final project }
+        items:
+          - title: { zh: 大作业上机报告, en: Final project report }
+            url: /docs/6 应数导/大作业/大作业.pdf
+          - title: { zh: 大作业汇报 PPT, en: Final presentation }
+            url: /docs/PPT/应数导/应数导.pdf
+
+  - title:
+      zh: 数值分析
+      en: Numerical Analysis
+    term:
+      zh: 2025-2026 春
+      en: Spring 2026
+    groups:
+      - title: { zh: 笔记, en: Notes }
+        items:
+          - title: { zh: 完整笔记, en: Complete notes }
+            url: /docs/7 数值分析/笔记/main.pdf
+      - title: { zh: 上机作业, en: Computing assignments }
+        batch:
+          base: /docs/7 数值分析/上机作业
+          file_prefix: 报告
+          dir_prefix: 作业
+          label: { zh: 第 %d 次上机作业, en: Computing assignment %d }
+          count: 5
+      - title: { zh: 书面作业, en: Written assignments }
+        batch:
+          base: /docs/7 数值分析/书面作业
+          file_prefix: 作业
+          dir_prefix: 作业
+          label: { zh: 第 %d 次书面作业, en: Written assignment %d }
+          count: 22
+
+  - title:
+      zh: 科学计算中的量子算法
+      en: Quantum Algorithms for Scientific Computation
+    term:
+      zh: 2025-2026 春
+      en: Spring 2026
+    groups:
+      - title: { zh: 作业, en: Assignments }
+        batch:
+          base: /docs/8 科学计算中的量子算法/作业
+          file_prefix: 作业
+          dir_prefix: 作业
+          label: { zh: 第 %d 次作业, en: Assignment %d }
+          count: 3
+      - title: { zh: 期末项目, en: Final project }
+        items:
+          - title: { zh: 期末论文, en: Final paper }
+            url: /docs/8 科学计算中的量子算法/论文/论文.pdf
