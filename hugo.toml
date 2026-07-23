@@ -1,45 +1,123 @@
 baseURL = "https://zebramath.github.io/"
-languageCode = "zh-cn"
-title = "zebramath | 个人主页"
+title = "zebramath"
 theme = "PaperMod"
 
-paginate = 10
+defaultContentLanguage = "zh"
+defaultContentLanguageInSubdir = false
+enableRobotsTXT = true
+enableGitInfo = false
+pagination.pagerSize = 10
 
 [params]
     env = "production"
-    title = "zebramath 的空间"
-    description = "学术科研 | 游戏影视"
-    keywords = ["Blog", "Research", "zebramath"]
     author = "zebramath"
-    
-    ShowReadingTime = true
+    keywords = ["Mathematics", "Numerical PDEs", "Scientific Computing", "zebramath"]
+    ShowReadingTime = false
     ShowShareButtons = false
     ShowCodeCopyButtons = true
+    ShowBreadCrumbs = false
+    defaultTheme = "auto"
+    disableThemeToggle = false
+    displayFullLangName = true
+    disableSpecial1stPost = true
 
-    defaultTheme = "light"
-    disableThemeToggle = true
-    
     [params.assets]
         disableHLJS = false
+        theme_color = "#f7f5ef"
+        favicon = "favicon.svg"
+        favicon16x16 = "favicon-16x16.png"
+        favicon32x32 = "favicon-32x32.png"
+        apple_touch_icon = "apple-touch-icon.png"
+        safari_pinned_tab = "favicon.svg"
 
-    [params.profileMode]
-        enabled = true
-        title = "你好, 我是 zebramath"
-        subtitle = "学术科研 | 游戏影视"
-[menu]
-    [[menu.main]]
-        name = "关于"
-        pageRef = "about" 
-        weight = 10
-    [[menu.main]]
-        name = "学业"
-        pageRef = "academic" 
-        weight = 20
-    [[menu.main]]
-        name = "科研"
-        pageRef = "research"
-        weight = 30
-    [[menu.main]]
-        name = "爱好"
-        pageRef = "hobbies"
-        weight = 40
+    [params.label]
+        text = "zebramath"
+
+    [[params.socialIcons]]
+        name = "github"
+        url = "https://github.com/zebramath"
+
+    [[params.socialIcons]]
+        name = "email"
+        url = "mailto:2400010714@stu.pku.edu.cn"
+
+[languages]
+    [languages.zh]
+        label = "中文"
+        locale = "zh-CN"
+        weight = 1
+        title = "zebramath｜个人主页"
+        copyright = "© zebramath"
+
+        [languages.zh.params]
+            description = "北京大学数学科学学院本科生；关注偏微分方程数值解、有限元方法、科学机器学习与量子计算。"
+            languageAltTitle = "中文"
+
+            [languages.zh.params.profileMode]
+                enabled = true
+                kicker = "科学计算 · 影视 · 游戏"
+                title = "你好，我是 zebramath"
+
+        [[languages.zh.menu.main]]
+            name = "关于"
+            pageRef = "/about"
+            weight = 10
+
+        [[languages.zh.menu.main]]
+            name = "学业"
+            pageRef = "/academic"
+            weight = 20
+
+        [[languages.zh.menu.main]]
+            name = "科研"
+            pageRef = "/research"
+            weight = 30
+
+        [[languages.zh.menu.main]]
+            name = "爱好"
+            pageRef = "/hobbies"
+            weight = 40
+
+    [languages.en]
+        label = "English"
+        locale = "en-US"
+        weight = 2
+        title = "zebramath | Personal Website"
+        copyright = "© zebramath"
+
+        [languages.en.params]
+            description = "Undergraduate at the School of Mathematical Sciences, Peking University, interested in numerical PDEs, FEM, scientific machine learning, and quantum computing."
+            languageAltTitle = "English"
+
+            [languages.en.params.profileMode]
+                enabled = true
+                kicker = "SCIENTIFIC COMPUTING · FILM & TV · GAMES"
+                title = "Hi, I'm zebramath"
+
+        [[languages.en.menu.main]]
+            name = "About"
+            pageRef = "/about"
+            weight = 10
+
+        [[languages.en.menu.main]]
+            name = "Academic"
+            pageRef = "/academic"
+            weight = 20
+
+        [[languages.en.menu.main]]
+            name = "Research"
+            pageRef = "/research"
+            weight = 30
+
+        [[languages.en.menu.main]]
+            name = "Hobbies"
+            pageRef = "/hobbies"
+            weight = 40
+
+[markup]
+    [markup.goldmark]
+        [markup.goldmark.renderer]
+            unsafe = true
+
+    [markup.highlight]
+        noClasses = false

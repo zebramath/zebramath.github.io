@@ -1,0 +1,90 @@
+{{- $lang := .Page.Lang -}}
+{{- $media := hugo.Data.hobbies.media -}}
+{{- range hugo.Data.media_import.media }}{{ $media = $media | append . }}{{ end -}}
+{{- $games := hugo.Data.hobbies.games -}}
+{{- range hugo.Data.steam.games }}{{ $games = $games | append . }}{{ end -}}
+{{- $settings := hugo.Data.hobbies.settings -}}
+{{- $pageSize := $settings.page_size | default 12 -}}
+{{- $titleOverrides := hugo.Data.media_titles_en | default dict -}}
+
+<div class="collection" data-collection data-page-size="{{ $pageSize }}">
+  <div class="collection-tabs" role="tablist" aria-label="{{ if eq $lang "zh" }}爱好分类{{ else }}Hobby categories{{ end }}">
+    <button class="collection-tab is-active" type="button" role="tab" aria-selected="true" data-tab-target="media">
+      <span aria-hidden="true">◉</span>{{ if eq $lang "zh" }}影视{{ else }}Film & TV{{ end }}<small>{{ len $media }}</small>
+    </button>
+    <button class="collection-tab" type="button" role="tab" aria-selected="false" data-tab-target="games">
+      <span aria-hidden="true">◇</span>{{ if eq $lang "zh" }}游戏{{ else }}Games{{ end }}<small>{{ len $games }}</small>
+    </button>
+  </div>
+
+  <div class="collection-toolbar">
+    <label class="resource-search collection-search">
+      <span class="sr-only">{{ if eq $lang "zh" }}搜索收藏{{ else }}Search collection{{ end }}</span>
+      <svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-4-4"></path></svg>
+      <input type="search" data-collection-search placeholder="{{ if eq $lang "zh" }}搜索名称…{{ else }}Search titles…{{ end }}">
+    </label>
+    <div class="filter-row" data-media-filters aria-label="{{ if eq $lang "zh" }}影视类型{{ else }}Media type{{ end }}">
+      <button class="filter-chip is-active" type="button" data-media-filter="all" aria-pressed="true">{{ if eq $lang "zh" }}全部{{ else }}All{{ end }}</button>
+      <button class="filter-chip" type="button" data-media-filter="movie" aria-pressed="false">{{ if eq $lang "zh" }}电影{{ else }}Films{{ end }}</button>
+      <button class="filter-chip" type="button" data-media-filter="series" aria-pressed="false">{{ if eq $lang "zh" }}电视剧{{ else }}Series{{ end }}</button>
+    </div>
+  </div>
+
+  <section class="collection-panel" role="tabpanel" data-tab-panel="media">
+    <div class="collection-grid">
+      {{- range $media }}
+        {{- $item := . -}}
+        {{- $title := index $item.title $lang | default (index $item.title "zh") -}}
+        {{- $url := $item.douban_url | default $item.url -}}
+        {{- if and (eq $lang "en") $url -}}
+          {{- $subjectID := replaceRE `^.*/subject/([0-9]+)/.*$` `$1` $url -}}
+          {{- with index $titleOverrides $subjectID }}{{ $title = . }}{{ end -}}
+        {{- end -}}
+        <article class="collection-card media-card" data-collection-card="media" data-media-type="{{ if eq $item.type "series" }}series{{ else }}movie{{ end }}">
+          {{- with $item.cover }}<img src="{{ . }}" alt="" loading="lazy" referrerpolicy="no-referrer">{{ else }}<div class="cover-placeholder" aria-hidden="true">{{ substr $title 0 1 }}</div>{{ end }}
+          <div class="collection-card-body">
+            <div class="card-meta"><span>{{ if eq $item.type "series" }}{{ if eq $lang "zh" }}剧集{{ else }}Series{{ end }}{{ else }}{{ if eq $lang "zh" }}电影{{ else }}Film{{ end }}{{ end }}</span>{{ with $item.year }}<span>{{ . }}</span>{{ end }}</div>
+            <h3>{{ if $url }}<a href="{{ $url }}" target="_blank" rel="noopener noreferrer">{{ $title }}</a>{{ else }}{{ $title }}{{ end }}</h3>
+            {{- with $item.note }}<p>{{ index . $lang | default (index . "zh") }}</p>{{ end }}
+          </div>
+        </article>
+      {{- end }}
+    </div>
+    <div class="empty-state collection-empty" data-collection-empty="media" {{ if gt (len $media) 0 }}hidden{{ end }}>
+      <span aria-hidden="true">◌</span>
+      <strong>{{ if eq $lang "zh" }}影视清单正在整理{{ else }}The watchlist is taking shape{{ end }}</strong>
+      <p>{{ if eq $lang "zh" }}这里会逐步收录电影与剧集。{{ else }}Films and series will gradually be collected here.{{ end }}</p>
+    </div>
+    <nav class="collection-pagination" data-pagination="media" aria-label="{{ if eq $lang "zh" }}影视分页{{ else }}Film and TV pagination{{ end }}" hidden></nav>
+  </section>
+
+  <section class="collection-panel" role="tabpanel" data-tab-panel="games" hidden>
+    <div class="collection-grid game-grid">
+      {{- range $games }}
+        {{- $item := . -}}
+        {{- $title := index $item.title $lang | default (index $item.title "zh") -}}
+        {{- $url := $item.url -}}
+        {{- with $item.steam_appid }}{{ $url = printf "https://store.steampowered.com/app/%v/" . }}{{ end -}}
+        <article class="collection-card game-card" data-collection-card="games">
+          <div class="game-cover">
+            {{- with $item.cover }}
+              <img src="{{ . }}" alt="" loading="lazy">
+            {{- else with $item.steam_appid }}
+              <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/{{ . }}/header.jpg" alt="" loading="lazy">
+            {{- else }}
+              <div class="cover-placeholder" aria-hidden="true">{{ substr $title 0 1 }}</div>
+            {{- end }}
+          </div>
+          <div class="collection-card-body">
+            <h3>{{ if $url }}<a href="{{ $url }}" target="_blank" rel="noopener noreferrer">{{ $title }}</a>{{ else }}{{ $title }}{{ end }}</h3>
+            {{- with $item.playtime_hours }}<p class="playtime">{{ if eq $lang "zh" }}游玩 {{ . }} 小时{{ else }}{{ . }} hours played{{ end }}</p>{{ end }}
+          </div>
+        </article>
+      {{- end }}
+    </div>
+    <div class="empty-state collection-empty" data-collection-empty="games" {{ if gt (len $games) 0 }}hidden{{ end }}>
+      <strong>{{ if eq $lang "zh" }}暂无匹配的游戏{{ else }}No matching games{{ end }}</strong>
+    </div>
+    <nav class="collection-pagination" data-pagination="games" aria-label="{{ if eq $lang "zh" }}游戏分页{{ else }}Game pagination{{ end }}" hidden></nav>
+  </section>
+</div>

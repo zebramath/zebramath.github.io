@@ -21,7 +21,8 @@ jobs:
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
-          hugo-version: 'latest'
+          # Keep deployments reproducible; update only after a local build check.
+          hugo-version: '0.164.0'
           extended: true
       - name: Build with Hugo
         run: hugo --minify

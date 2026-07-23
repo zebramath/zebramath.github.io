@@ -1,29 +1,8 @@
-<meta name="robots" content="noindex, nofollow">
-
-<meta name="google" content="notranslate">
-
-<script type="text/javascript">
-    document.oncontextmenu = function () {
-        return false;
-    };
-</script>
-
-<style>
-    body {
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-    }
-
-</style>
-
-<script type="text/javascript">
-    document.onkeydown = function (e) {
-        if (e.keyCode == 123) return false;
-        if (e.ctrlKey && e.keyCode == 85) return false;
-        if (e.ctrlKey && e.keyCode == 83) return false;
-        if (e.ctrlKey && e.keyCode == 67) return false;
-        if (e.ctrlKey && e.shiftKey && e.keyCode == 73) return false;
-    };
-</script>
+<meta name="color-scheme" content="light dark">
+<meta name="format-detection" content="telephone=no">
+<meta name="robots" content="index, follow, noarchive">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<script>document.title = {{ if .IsHome }}{{ site.Params.label.text | jsonify | safeJS }}{{ else }}{{ .Title | plainify | jsonify | safeJS }}{{ end }};</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;500;600;700&family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
