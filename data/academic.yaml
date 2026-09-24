@@ -90,3 +90,90 @@ courses:
         items:
           - title: { zh: 期末论文, en: Final paper }
             url: /docs/8 科学计算中的量子算法/论文/论文.pdf
+
+  - title:
+      zh: 偏微分方程数值解
+      en: Numerical Solutions of Partial Differential Equations
+    term:
+      zh: 2026-2027 秋
+      en: Fall 2026
+    groups:
+      - title: { zh: 笔记, en: Notes }
+        items:
+          - title: { zh: 完整笔记, en: Complete notes }
+            url: /docs/9 偏微分方程数值解/笔记/main.pdf
+      - title: { zh: 作业, en: Assignments }
+        batch:
+          base: /docs/9 偏微分方程数值解/作业
+          file_prefix: 作业
+          dir_prefix: 作业
+          label: { zh: 第 %d 次作业, en: Assignment %d }
+          count: 1
+
+  - title:
+      zh: 实变函数
+      en: Functions of a Real Variable
+    term:
+      zh: 2026-2027 秋
+      en: Fall 2026
+    groups:
+      - title: { zh: 笔记, en: Notes }
+        items:
+          - title: { zh: 完整笔记, en: Complete notes }
+            url: /docs/10 实变函数/笔记/main.pdf
+      - title: { zh: 作业, en: Assignments }
+        batch:
+          base: /docs/10 实变函数/作业
+          file_prefix: 作业
+          dir_prefix: 作业
+          label: { zh: 第 %d 次作业, en: Assignment %d }
+          count: 1
+
+  - title:
+      zh: 最优化方法
+      en: Optimization Methods
+    term:
+      zh: 2026-2027 秋
+      en: Fall 2026
+    groups:
+      - title: { zh: 作业, en: Assignments }
+        batch:
+          base: /docs/11 最优化方法/作业
+          file_prefix: 作业
+          dir_prefix: 作业
+          label: { zh: 第 %d 次作业, en: Assignment %d }
+          count: 3
+
+  - title:
+      zh: 偏微分方程
+      en: Partial Differential Equations
+    term:
+      zh: 2026-2027 秋
+      en: Fall 2026
+    groups:
+      - title: { zh: 笔记, en: Notes }
+        items:
+          - title: { zh: 完整笔记, en: Complete notes }
+            url: /docs/12 偏微分方程/笔记/main.pdf
+      - title: { zh: 作业, en: Assignments }
+        batch:
+          base: /docs/12 偏微分方程/作业
+          file_prefix: 作业
+          dir_prefix: 作业
+          label: { zh: 第 %d 次作业, en: Assignment %d }
+          count: 1
+
+  - title:
+      zh: 随机模拟方法
+      en: Stochastic Simulation Methods
+    term:
+      zh: 2026-2027 秋
+      en: Fall 2026
+    groups:
+      - title: { zh: 作业, en: Assignments }
+        batch:
+          base: /docs/13 随机模拟方法/作业
+          file_prefix: 作业
+          dir_prefix: 作业
+          label: { zh: 第 %d 次作业, en: Assignment %d }
+          count: 3

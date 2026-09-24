@@ -1,13 +1,13 @@
 ---
 title: "Research"
-description: "Research direction and experience"
+description: "Research directions and experience"
 date: 2024-04-07
 draft: false
 hidemeta: true
 ---
 
-## Numerical methods for PDEs in multiscale problems
+## Numerical Solutions of Partial Differential Equations in Multiscale Problems
 
-December 2025—present
+Dec 2025–Oct 2026
 
-Researching efficient and highly accurate numerical methods for solving multiscale PDEs.
+Investigating efficient iterative algorithms for solving high-contrast multiscale problems.

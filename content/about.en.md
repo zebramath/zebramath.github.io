@@ -6,33 +6,40 @@ draft: false
 hidemeta: true
 ---
 
-## Hi, I&#39;m zebramath
+## Hi, I'm zebramath
 
-I am currently a 2024-entry undergraduate at the School of Mathematical Sciences, Peking University, specializing in Computational Mathematics.
+I am a 2024-entry undergraduate at the School of Mathematical Sciences, Peking University, specializing in Computational Mathematics.
 
+## Research Interests
 
-## Research interests
-
-- Numerical PDEs
+- Numerical solutions of partial differential equations
 - Finite element methods
-- Scientific machine learning
-- Quantum computing
 
 ## Education
 
 Peking University · School of Mathematical Sciences
 
-B.S. in Mathematics and Applied Mathematics · Sep 2024—present
+B.S. in Mathematics and Applied Mathematics · Sep 2024–present
 
-### Honors and awards
+### Honors and Awards
 
-- Academic Excellence Award
-- Lingjun Leadership Scholarship
-- Ding Shisun–Gui Linlin Outstanding Student Scholarship Fund
+- National Scholarship (2025–2026 academic year)
+- Academic Excellence Award (2025–2026 academic year)
+- Selected for the Undergraduate Elite Program in Applied Mathematics and Statistics
+- Lingjun Leading Scholarship (2024–2025 academic year)
+- Peking University Ding Shisun–Gui Linlin Outstanding Student Scholarship Fund (2024–2025 academic year)
+- Academic Excellence Award (2024–2025 academic year)
 
-## Research experience
+### Competition Awards
 
-Numerical methods for PDEs in multiscale problems · Dec 2025—present
+- Honorable Mention in Applied and Computational Mathematics, 2026 S.-T. Yau College Student Mathematics Contest
+- First Prize (Beijing Division), 17th National College Student Mathematics Competition
+- Second Prize, 23rd “Jiang Zehan Cup” Math Modeling and Computer Application Contest
+- First Prize, 2023 Chinese Mathematical Olympiad (National Finals)
+
+## Research Experience
+
+Numerical solutions of partial differential equations in multiscale problems · Dec 2025–Oct 2026
 
 ## Contact
 
