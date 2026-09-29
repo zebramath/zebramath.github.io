@@ -142,7 +142,7 @@ courses:
           file_prefix: 作业
           dir_prefix: 作业
           label: { zh: 第 %d 次作业, en: Assignment %d }
-          count: 3
+          count: 4
 
   - title:
       zh: 偏微分方程
@@ -161,7 +161,7 @@ courses:
           file_prefix: 作业
           dir_prefix: 作业
           label: { zh: 第 %d 次作业, en: Assignment %d }
-          count: 1
+          count: 2
 
   - title:
       zh: 随机模拟方法
@@ -176,4 +176,4 @@ courses:
           file_prefix: 作业
           dir_prefix: 作业
           label: { zh: 第 %d 次作业, en: Assignment %d }
-          count: 3
+          count: 5
