@@ -108,7 +108,7 @@ courses:
           file_prefix: 作业
           dir_prefix: 作业
           label: { zh: 第 %d 次作业, en: Assignment %d }
-          count: 1
+          count: 2
 
   - title:
       zh: 实变函数
@@ -127,7 +127,7 @@ courses:
           file_prefix: 作业
           dir_prefix: 作业
           label: { zh: 第 %d 次作业, en: Assignment %d }
-          count: 1
+          count: 2
 
   - title:
       zh: 最优化方法
@@ -161,7 +161,7 @@ courses:
           file_prefix: 作业
           dir_prefix: 作业
           label: { zh: 第 %d 次作业, en: Assignment %d }
-          count: 2
+          count: 3
 
   - title:
       zh: 随机模拟方法
