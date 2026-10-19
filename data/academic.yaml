@@ -102,12 +102,19 @@ courses:
         items:
           - title: { zh: 完整笔记, en: Complete notes }
             url: /docs/9 偏微分方程数值解/笔记/main.pdf
-      - title: { zh: 作业, en: Assignments }
+      - title: { zh: 上机作业, en: Computing assignments }
         batch:
-          base: /docs/9 偏微分方程数值解/作业
+          base: /docs/9 偏微分方程数值解/上机作业
+          file_prefix: 报告
+          dir_prefix: 作业
+          label: { zh: 第 %d 次上机作业, en: Computing assignment %d }
+          count: 1
+      - title: { zh: 书面作业, en: Written assignments }
+        batch:
+          base: /docs/9 偏微分方程数值解/书面作业
           file_prefix: 作业
           dir_prefix: 作业
-          label: { zh: 第 %d 次作业, en: Assignment %d }
+          label: { zh: 第 %d 次书面作业, en: Written assignment %d }
           count: 2
 
   - title:
@@ -127,7 +134,7 @@ courses:
           file_prefix: 作业
           dir_prefix: 作业
           label: { zh: 第 %d 次作业, en: Assignment %d }
-          count: 2
+          count: 3
 
   - title:
       zh: 最优化方法
@@ -142,7 +149,7 @@ courses:
           file_prefix: 作业
           dir_prefix: 作业
           label: { zh: 第 %d 次作业, en: Assignment %d }
-          count: 4
+          count: 5
 
   - title:
       zh: 偏微分方程
@@ -176,4 +183,4 @@ courses:
           file_prefix: 作业
           dir_prefix: 作业
           label: { zh: 第 %d 次作业, en: Assignment %d }
-          count: 5
+          count: 9
