@@ -115,7 +115,7 @@ courses:
           file_prefix: 作业
           dir_prefix: 作业
           label: { zh: 第 %d 次书面作业, en: Written assignment %d }
-          count: 2
+          count: 3
 
   - title:
       zh: 实变函数
@@ -134,7 +134,7 @@ courses:
           file_prefix: 作业
           dir_prefix: 作业
           label: { zh: 第 %d 次作业, en: Assignment %d }
-          count: 3
+          count: 4
 
   - title:
       zh: 最优化方法
@@ -149,7 +149,7 @@ courses:
           file_prefix: 作业
           dir_prefix: 作业
           label: { zh: 第 %d 次作业, en: Assignment %d }
-          count: 5
+          count: 9
 
   - title:
       zh: 偏微分方程
@@ -168,7 +168,7 @@ courses:
           file_prefix: 作业
           dir_prefix: 作业
           label: { zh: 第 %d 次作业, en: Assignment %d }
-          count: 3
+          count: 6
 
   - title:
       zh: 随机模拟方法
@@ -183,4 +183,4 @@ courses:
           file_prefix: 作业
           dir_prefix: 作业
           label: { zh: 第 %d 次作业, en: Assignment %d }
-          count: 9
+          count: 15
