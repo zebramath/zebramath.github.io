@@ -134,7 +134,7 @@ courses:
           file_prefix: 作业
           dir_prefix: 作业
           label: { zh: 第 %d 次作业, en: Assignment %d }
-          count: 4
+          count: 5
 
   - title:
       zh: 最优化方法
@@ -149,7 +149,7 @@ courses:
           file_prefix: 作业
           dir_prefix: 作业
           label: { zh: 第 %d 次作业, en: Assignment %d }
-          count: 9
+          count: 10
 
   - title:
       zh: 偏微分方程
@@ -168,7 +168,7 @@ courses:
           file_prefix: 作业
           dir_prefix: 作业
           label: { zh: 第 %d 次作业, en: Assignment %d }
-          count: 6
+          count: 7
 
   - title:
       zh: 随机模拟方法
@@ -177,10 +177,17 @@ courses:
       zh: 2026-2027 秋
       en: Fall 2026
     groups:
-      - title: { zh: 作业, en: Assignments }
+      - title: { zh: 上机作业, en: Computing assignments }
         batch:
-          base: /docs/13 随机模拟方法/作业
+          base: /docs/13 随机模拟方法/上机作业
+          file_prefix: 报告
+          dir_prefix: 作业
+          label: { zh: 第 %d 次上机作业, en: Computing assignment %d }
+          count: 1
+      - title: { zh: 书面作业, en: Written assignments }
+        batch:
+          base: /docs/13 随机模拟方法/书面作业
           file_prefix: 作业
           dir_prefix: 作业
-          label: { zh: 第 %d 次作业, en: Assignment %d }
+          label: { zh: 第 %d 次书面作业, en: Written assignment %d }
           count: 15
